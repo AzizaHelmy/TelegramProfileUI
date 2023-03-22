@@ -5,7 +5,7 @@
     <Transition
         motion:constraintSetEnd="@+id/end"
         motion:constraintSetStart="@id/start"
-        motion:duration="600">
+        motion:duration="6000">
         <KeyFrameSet></KeyFrameSet>
         <OnSwipe
             motion:touchAnchorId="@+id/profile_iv"
@@ -174,33 +174,5 @@
             motion:touchAnchorId="@+id/scrollView"
             motion:touchAnchorSide="top" />
     </Transition>
-    <ConstraintSet
-        android:id="@+id/last_motion"
-        motion:deriveConstraintsFrom="@id/second_motion">
-        <Constraint
-            android:id="@+id/background_header"
-            android:layout_width="match_parent"
-            android:layout_height="340dp"
-            motion:layout_constraintEnd_toEndOf="parent"
-            motion:layout_constraintStart_toStartOf="parent"
-            motion:layout_constraintTop_toTopOf="parent" />
-        <Constraint
-            android:id="@+id/profile_iv"
-            android:layout_width="match_parent"
-            android:layout_height="340dp"
-            motion:layout_constraintBottom_toBottomOf="@id/background_header"
-            motion:layout_constraintStart_toEndOf="parent">
-            <CustomAttribute
-                motion:attributeName="roundPercent"
-                motion:customDimension="0dp" />
-        </Constraint>
-    </ConstraintSet>
-    <Transition
-        motion:constraintSetEnd="@id/last_motion"
-        motion:constraintSetStart="@id/second_motion"
-        motion:duration="500">
-        <OnSwipe
-            motion:dragDirection="dragDown"
-            motion:touchAnchorId="@id/background_header" />
-    </Transition>
+
 </MotionScene>

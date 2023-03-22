@@ -2,4 +2,12 @@
     <string name="app_name">TelegramProfileTask</string>
     <string name="aziza_helmy">Aziza Helmy</string>
     <string name="online">Online</string>
+    <string name="settings">Settings</string>
+    <string name="data_and_storage">Data and Storage</string>
+    <string name="privacy_and_security">Privacy and Security</string>
+    <string name="chat_settings">Chat Settings</string>
+    <string name="power_saving">Power Saving</string>
+    <string name="chat_folder">Chat Folder</string>
+    <string name="devices">Devices</string>
+    <string name="language">Language</string>
 </resources>

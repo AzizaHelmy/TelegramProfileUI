@@ -112,7 +112,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
-        android:scrollbars="none"
+        android:background="@color/light_blue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -123,46 +123,54 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/account_tv"
+                android:id="@+id/settings_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
+                style="@style/textStyle"
+                android:layout_margin="16dp"
                 android:fontFamily="sans-serif"
-                android:text="Accout"
-                android:textColor="@color/white"
-                android:textSize="16sp"
+                android:paddingBottom="8dp"
+                android:text="@string/settings"
+                android:textColor="@color/blue_400"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/text_theme"
+                android:id="@+id/chat_settings_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Chat Settings"
+                style="@style/textStyle"
+                android:text="@string/chat_settings"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/account_tv" />
+                app:drawableStartCompat="@drawable/ic_chat"
+                app:layout_constraintTop_toBottomOf="@+id/settings_tv" />
 
             <com.google.android.material.divider.MaterialDivider
                 android:id="@+id/materialDivider"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
+                style="@style/dividerStyle"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/text_theme" />
+                app:layout_constraintTop_toBottomOf="@+id/chat_settings_tv" />
 
             <TextView
                 android:id="@+id/text_language"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Privacy and Security"
+                style="@style/textStyle"
+                android:text="@string/privacy_and_security"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
+                app:drawableStartCompat="@drawable/ic_security"
                 app:layout_constraintTop_toBottomOf="@+id/materialDivider" />
 
             <com.google.android.material.divider.MaterialDivider
                 android:id="@+id/divider_language"
                 style="@style/dividerStyle"
+                android:layout_height="0dp"
                 android:layout_width="match_parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -172,15 +180,16 @@
                 android:id="@+id/text_about"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Data and Storage"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
+                style="@style/textStyle"
+                android:text="@string/data_and_storage"
                 app:layout_constraintStart_toStartOf="parent"
+                app:drawableStartCompat="@drawable/ic_stoarge"
                 app:layout_constraintTop_toBottomOf="@+id/divider_language" />
 
             <com.google.android.material.divider.MaterialDivider
                 android:id="@+id/divider_about"
                 style="@style/dividerStyle"
+                android:layout_height="0dp"
                 android:layout_width="match_parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -190,15 +199,16 @@
                 android:id="@+id/text_contact"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Power Saving"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
+                style="@style/textStyle"
+                android:text="@string/power_saving"
                 app:layout_constraintStart_toStartOf="parent"
+                app:drawableStartCompat="@drawable/ic_charging"
                 app:layout_constraintTop_toBottomOf="@+id/divider_about" />
 
             <com.google.android.material.divider.MaterialDivider
                 android:id="@+id/divider_contact"
                 style="@style/dividerStyle"
+                android:layout_height="0dp"
                 android:layout_width="match_parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -206,17 +216,18 @@
 
             <TextView
                 android:id="@+id/text_log_out"
+                style="@style/textStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Chat Folder"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:text="@string/chat_folder"
                 app:layout_constraintStart_toStartOf="parent"
+                app:drawableStartCompat="@drawable/ic_folder"
                 app:layout_constraintTop_toBottomOf="@+id/divider_contact" />
 
             <com.google.android.material.divider.MaterialDivider
                 android:id="@+id/divider_log_out"
                 style="@style/dividerStyle"
+                android:layout_height="0dp"
                 android:layout_width="match_parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -226,15 +237,16 @@
                 android:id="@+id/devices_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Devices"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
+                style="@style/textStyle"
+                android:text="@string/devices"
                 app:layout_constraintStart_toStartOf="parent"
+                app:drawableStartCompat="@drawable/ic_devices"
                 app:layout_constraintTop_toBottomOf="@+id/divider_log_out" />
 
             <com.google.android.material.divider.MaterialDivider
                 android:id="@+id/devices_divider"
                 style="@style/dividerStyle"
+                android:layout_height="0dp"
                 android:layout_width="match_parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -244,15 +256,16 @@
                 android:id="@+id/language_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Language"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
+                style="@style/textStyle"
+                android:text="@string/language"
                 app:layout_constraintStart_toStartOf="parent"
+                app:drawableStartCompat="@drawable/ic_language"
                 app:layout_constraintTop_toBottomOf="@+id/devices_divider" />
 
             <com.google.android.material.divider.MaterialDivider
                 android:id="@+id/langauage_divider"
                 style="@style/dividerStyle"
+                android:layout_height="0dp"
                 android:layout_width="match_parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
